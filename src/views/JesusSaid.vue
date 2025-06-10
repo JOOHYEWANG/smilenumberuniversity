@@ -34,7 +34,7 @@
     <p class="bible-verse">누가복음 6:39 KRV : 또 비유로 말씀하시되 소경이 소경을 인도할 수 있느냐 둘이 다 구덩이에 빠지지 아니하겠느냐</p>
 
     <section class="section">
-      <h2>Mathematical physic</h2>
+      <h2>Mathematical physics</h2>
       <p>요즘 물리학의 진짜 핵심은 실세계에서 실험할수 없는 경우이다. 양자역학 고양이라는 가상 세계의 사고 실험을 제안하기도 한다.<sup class="footnote">이 부분도 물리수학으로 추가하기로 한다.</sup> 이러한 경우 수학에서는 컴퓨터 계산으로 만들어 낼 수 있는 프랙탈 기하학이 있다. 그러한 프랙탈 기하학은 자연에서 혼돈계를 나타내고 있다고 한다. 따라서 그러한 무작위 혼돈계에서 물리학 실험을 할 수 없는 것은 자명하다.<sup class="footnote">물리학은 일단 중요 그리고 관심 물리학의 문제를 실험을 한다. 그리고 그 데이터를 모아서 이론 물리학자 분들이 분석을 하신다. 그리고 결국 물리상수(물리학 교재의 물리상수들,...) 같은 것을 도출하신다. 또한 수학을 물리학의 언어로 사용하고 있으시다.</sup></p>
 
       <p>집합론의 핵심개념은 칸토어의 대각논법(<em class="latex-emph">Diagonal argument</em>)이다. 즉, 무한을 세는 수학적 방법 발견되었다.</p>
@@ -188,7 +188,7 @@ export default {
 
 .fractal-image {
   max-width: 100%;
-  width: 52%;
+  width: 72%;
   height: auto;
   display: block;
   margin: 0 auto;
