@@ -7,18 +7,18 @@
     <br>
 
     <div class="contact-page">
-      <h1>CONTACT SMILENUMBER MOTORS</h1>
+      <h3>CONTACT SMILENUMBER MOTORS</h3>
       <div class="contact-info">
         <p>If you have any questions or need further information, please feel free to contact us:</p>
         <br>
         <ul>
           <li><strong>Phone:</strong> +82 10 3319 3141</li>
-          <li><strong>Email:</strong> joohyewang@yonsei.ac.kr</li>
+          <li><strong>Email:</strong> joohyewang@gmail.com</li>
           <li><strong>Address:</strong> PI-si, Gangwon-do, South Korea</li>
         </ul>
       </div>
       <div class="contact-form">
-        <h2>Send Us a Message</h2>
+        <h3>Send Us a Message</h3>
         <form @submit.prevent="submitForm">
           <div class="form-group">
             <label for="name">Name:</label>
@@ -113,7 +113,7 @@ export default {
 }
 
 button {
-  background-color: orange;
+  background-color: #999;
   color: white;
   border: none;
   padding: 10px 20px;

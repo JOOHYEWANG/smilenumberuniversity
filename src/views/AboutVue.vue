@@ -14,7 +14,7 @@
       class="latex-input"
     ></textarea>
 
-    <button @click="compileLatex" class="compile-button">컴파일</button>
+    <button @click="compileLatex" class="compile-button">math gogogo!</button>
 
     <div v-html="renderedLatex" class="latex-output"></div>
 
@@ -222,7 +222,7 @@ export default {
   width: 180px; /* 너비 증가 */
   padding: 12px 20px; /* 패딩 증가 */
   margin: 0 auto 30px auto; /* 마진 증가 */
-  background-color: #28a745; /* 버튼 색상 변경 */
+  background-color: #999; /* 버튼 색상 변경 */
   color: white;
   border: none;
   border-radius: 8px; /* 둥근 모서리 증가 */
@@ -234,12 +234,12 @@ export default {
 }
 
 .compile-button:hover {
-  background-color: #218838;
+  background-color: #464545;
   transform: translateY(-2px); /* 호버 시 약간 위로 이동 */
 }
 
 .compile-button:active {
-  background-color: #1e7e34;
+  background-color: #444343;
   transform: translateY(0);
 }
 
@@ -270,7 +270,7 @@ export default {
 }
 
 .info-title {
-  color: #007bff; /* 색상 변경 */
+  color: #999; /* 색상 변경 */
   margin-bottom: 12px;
   font-size: 1.8em; /* 폰트 크기 증가 */
   font-weight: bold;
@@ -298,4 +298,19 @@ export default {
 .Map-grid-container {
   margin-top: 80px; /* 원하는 만큼의 상단 마진 설정 */ /* 원하는 만큼의 하단 마진 설정 */
 }
+
+.options {
+  display: flex;
+  flex-direction: row; /* 기본은 가로 배열 */
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .options {
+    flex-direction: column; /* 화면 폭이 600px 이하일 때 세로 배열 */
+    align-items: flex-start;
+  }
+}
+
 </style>

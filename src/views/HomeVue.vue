@@ -25,7 +25,7 @@
     <br>
 
 
-      <img src="@/assets/SmileMathUniversity.png" alt="Smile Math University Logo" class="a2-image">
+      <img src="@/assets/SmileMathUniversity2.png" alt="Smile Math University Logo" class="a2-image">
     </div>
 
     <div class="MapSearch-grid-container">
@@ -379,4 +379,20 @@ export default {
 }
 
 /* Any other global styles not related to specific components could go here or in a separate stylesheet */
+
+@media (max-width: 768px) {
+  .LanguageDropdown-container {
+    position: relative;
+    bottom: 62px;
+    left: 50%;
+    transform: translateX(-55%);
+    z-index: 1;
+  }
+
+  .smile-text{
+     
+font-size: 17px;
+  }
+}
+
 </style>

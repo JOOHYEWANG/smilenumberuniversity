@@ -263,10 +263,16 @@ const router = createRouter({
     if (savedPosition) {
       return savedPosition;
     } else {
-      return { x: 0, y: 0 };
+      // 페이지 이동 후 부드럽게 스크롤 상단으로 이동
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({ left: 0, top: 0, behavior: 'smooth' });
+        }, 100);
+      });
     }
   },
 });
+
 
 
 export default router;

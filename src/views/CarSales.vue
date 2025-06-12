@@ -1,20 +1,30 @@
 <template>
-  <div class="page-container">
-    <header class="main-menu">
-      <nav>
-        <ul>
-          <li><a href="/">home</a></li>
-          <li><a href="/Grid">math class</a></li>
-          <li><a href="https://joohyewang9.wixsite.com/mathematics0">math lecture</a></li>
-          <li><a href="https://joohyewang9.wixsite.com/mathematics0">math research</a></li>
-        </ul>
-      </nav>
-    </header>
+ <div class="page-container">
+    <header class="main-menu" id="mainMenu">
+  <!-- ☰ 모바일 토글 버튼 -->
+  
+  <nav>
+    <ul>
+      <li><a href="/">home</a></li>
+      <li><a href="/Grid">class</a></li>
+      <li><a href="https://joohyewang9.wixsite.com/mathematics0">lecture</a></li>
+      <li><a href="https://joohyewang9.wixsite.com/mathematics0">research</a></li>
+      <li><a href="/Grid">mathematics</a></li>
+      <li><a href="/Grid">airplane</a></li>
+      <li><a href="/Grid">Robot</a></li>
+      <li><a href="/Grid">automobile</a></li>
+    </ul>
+  </nav>
+</header>
+
 
     <main class="main-content">
       <div class="math-article">
         <section class="section-block">
-          <h1 class="title">SlidingPuzzle mathematics</h1>
+          <h3 class="title">SlidingPuzzle mathematics</h3>
+          
+           <br><br>
+
           <p class="author left-align-text">
             <em class="italic-text">Hyewang Joo, Smile Number Institute</em>
           </p>
@@ -27,16 +37,17 @@
             <small>Keywords: Sliding puzzle, P=NP, Information theory, Probability, Polynomial-time algorithm, Choice axiom</small>
           </p>
 
-          <h2>Abstract</h2>
+         
+          <h3>Abstract</h3>
           <p class="left-align-text">
             우리는 비직관 알고리즘 위에서 퍼즐게임을 시작하기로 한다. 즉, 비-직관 알고리즘(<em class="italic-text">non-intuition algorithm</em>)을 슬라이딩 퍼즐에 적용한다. 그때 퍼즐은 스스로 완성된 형태(<em class="italic-text">1,2,3,...,n</em>)로 만들어진다. 우리는 이 논문에서 큰오기호(<em class="italic-text">big O notation</em>)를 사용하여서 <em class="italic-text">P=NP</em>를 만족한다는 것을 수치적 증명으로 보이지는 않는다. 우리는 슬라이딩 퍼즐게임을 최단거리로 풀이하는 문제가 <em class="italic-text">NP</em>라는 것을 알고 있으므로 실제로 슬라이딩 퍼즐게임에서 그것이 풀이되는 알고리즘을 제시하고 그것이 슬라이딩 퍼즐을 풀이되도록 만드는 것을 섀넌의 정보이론을 사용하여 증명한다. 그리고 정리 3.1의 증명이 수학적으로 불충분하다고 느낄수도 분들을 위하여 마지막 장에서 선택공리를 추가로 증명한다.
           </p>
         </section>
 
-        ---
+   
 
         <section class="section-block">
-          <h2>1. Introduction</h2>
+          <h3>1. Introduction</h3>
           <p class="left-align-text">
             다음과 같이 가정하기로 한다.<sup>소개글 부분은 형식적인 약속 부분이므로 읽지 않고 넘어간다고 해도 무방하다.</sup> 경기자 2는 경기자 1의 모든 전략과 퍼즐게임에서의 승리 전략을 알고 있다. 이때 경기자 1은 자신의 첫번째 전략 선택 1을 따르지 않는다. 아래는 위의 특수한 상황에 대한 구체적인 설명이다. 경기자 1은 제한적인 조합적 계산능력을 가지고 있다. 퍼즐이 풀리는 조합계산의 길이를 $|N|$이라고 할때 그는 언제나 $|K|<|N|$의 계산길이 $|K|$를 가진다고 약속한다. 그러므로 경기자 1은 합리성을 구축하기 위하여, 즉 퍼즐게임의 풀이 방법을 알기 위하여 비-직관적 알고리즘을 사용한다. 그때 그는 2차원 슬라이딩 퍼즐에 관해서 그 풀이를 얻게된다. 이때 선택 1에 대한 비-직관 알고리즘을 적용한 결과를 선택 2라고 부르기로 한다. 아래는 풀리지 않은 숫자 슬라이딩 퍼즐과, 풀이된 슬라이딩 퍼즐을 보여준다.
           </p>
@@ -72,8 +83,8 @@
           </div>
 
           <p class="left-align-text">
-            우리는 비직관 알고리즘을 적용한 결과 경기자 2에 대하여 합리성을 구축할수 있다.\\
-            슬라이딩 퍼즐게임에서 자신의 처음 선택 1을 따르지 않는 선택 2를 비직관 알고리즘이라 부르기로 한다.\\
+            우리는 비직관 알고리즘을 적용한 결과 경기자 2에 대하여 합리성을 구축할수 있다.
+            슬라이딩 퍼즐게임에서 자신의 처음 선택 1을 따르지 않는 선택 2를 비직관 알고리즘이라 부르기로 한다.
             지금 부터 경기자 2를 콤퓨터(인공지능)라고 가정하기로 한다. 콤퓨터는 게임에 대한 모든 승리전략과 경기자 1의 전략을 알고 있다고 가정한다. 그러나 그러한 콤퓨터의 전략에는 약간의 약점이 존재한다. 콤퓨터는 아주 빠른 번개같은 계산으로 경기자 1의 모든 전략을 알고 퍼즐 조합을 제시한다고 가정된다. 그때 경기자 1은 자신의 첫번째 선택 1을 따르지 않는 것으로 승리할수 있다는 다소 어이없는 전략을 사용한다. 왜냐하면 선택 1은 콤퓨터의 전략이기 때문이다. 그때 선택 1만을 제외한 다른 방향을 선택 하는 전략을 비-직관 알고리즘이라고 부르기로 하고 그것을 선택 2라고 나타내기로 한다. 이때 ``모든 전략을 아는데 왜? 비직관 알고리즘을 적용하는 것은 모르느냐?'' 그것은 슬라이딩 퍼즐의 다음 단계 (<em class="italic-text">stage</em>)에서 설명된다. 우리는 이러한 동일한 가정을 비직관 알고리즘을 적용한 다음 퍼즐의 단계에서 동일하게 적용할수 있다. 즉 콤퓨터는 이미 알고 그 조합으로 유도한 것이 된다. 그러나 매단계 시간의 흐름에 대하여 슬라이딩 퍼즐이 이미 풀이된 직후이다. 즉, 콤퓨터는 매단계 그의 전략을 수정해야 한다(콤퓨터가 과거를 바꿀수는 없다.)
           </p>
 
@@ -86,10 +97,10 @@
           </p>
         </section>
 
-        ---
+
 
         <section class="section-block">
-          <h2>2. Proof idea</h2>
+          <h3>2. Proof idea</h3>
           <p class="left-align-text">
             먼저 슬라이딩 퍼즐 위에서 확률공간을 정의해보자. 전체집합은 모든 퍼즐의 조합이고 그에 따라서 확률변수는 모든 길이의 조합이 발생할 확률이라고 둘수 있다. 그때 각각의 슬라이딩 퍼즐의 조합은 하나의 확률과 대응된다. 이때 그것을 확률공간이라고 부른다. 그럼 우리는 슬라이딩 퍼즐 공간이라는 것을 구축 하기로 한다. 충분히 큰 퍼즐이 주어졌을때 그러한 슬라이딩 퍼즐을 풀이하고 있는 의사결정자를 가정하자. 이때 의사결정자가 가지는 무작위 성 1의 정의에 의하여 그는 그의 계산능력을 넘어서는 퍼즐의 조합들과 자기 자신이 계산한 조합의 다름을 구분하지 못한다. 그러므로 충분히 큰 퍼즐에 대하여 그의 계산능력은 $0$이라고 정의하기로 하자. 그때 슬라이딩 퍼즐의 조합의 움직임은 무작위 적이다. 즉, 각각의 모든 슬라이딩 퍼즐의 조합들은 무작위적이라고 정의 하자. 그러므로 슬라이딩 퍼즐의 풀이 확률이 $0$부터 어떤 확률 값을 가질때 그것은 모두 무작위적이고 거짓값을 가진다고 가정하자.
           </p>
@@ -103,10 +114,10 @@
           </p>
         </section>
 
-        ---
+
 
         <section class="section-block">
-          <h2>3. Formal proof of the sliding puzzle space</h2>
+          <h3>3. Formal proof of the sliding puzzle space</h3>
           <p class="left-align-text">
             퍼즐게임에서는 첫번째 선택 1은 제한적인 계산 능력에 의하여 만들어진다. 만약 의사결정자가 이러한 선택을 한다면 그것은 충분히 큰 슬라이딩 퍼즐안에서 연속적으로 무작위성 1을 만들어 내는 것과 동일하다. 왜냐하면 직관적으로 무작위성이 만들어 지지 않는다면 그것은 그의 직관적인 계산대로 풀이 되어야 한다. 그런데 이때 중요한 것은 선택 2의 정의이다. 선택 1은 확률적으로 가장 높은 선택이다. 그런데 우리는 그것을 제외한 선택 2라는 것을 만들어내는 비직관적인 선택을 한다. 이것은 의사결정자 자신에게 예상하지 못한 결과를 만들어 낸다. 즉 그것은 누구도(의사결정자 자신을 포함한다.) 예측하지 못한 것이다. 예측하지 못했으므로 이곳에서 또한 무작위성 2가 만들어진다. 즉, 간단히 이야기 하자면 우리가 만들어내는 무작위성 1에서 탈출하는 방법은 또 다른 무작위성 2를 만들어 내는 것이다. 그리고 퍼즐이 풀이될 확률의 역수의 로그값인 정보이론의 정보의 양으로 소개글과 초록의 참값과 거짓값을 정의하기로 한다. 그리고 이러한 슬라이딩 퍼즐 공간을 $(\Omega, \mathscr{P}, r)$이라고 나타내기로 한다. 또한 아래의 정리 3.1이 성립한다. 아래 정리 3.1에 사용한 용어 무작위성 1, 2의 수학적 개념의 엄밀한 정의는 <em class="italic-text">Appendix II</em>에서 엄밀하게 약속하기로 한다.
           </p>
@@ -262,10 +273,10 @@
           </p>
         </section>
 
-        ---
+
 
         <section class="section-block">
-          <h2>4. Appendix I: Definition of the randomness 1, 2</h2>
+          <h3>4. Appendix I: Definition of the randomness 1, 2</h3>
           <p class="left-align-text">
             아래의 수식 (13)을 생각해보자. 그것은 슬라이딩퍼즐의 임의의 단계에서의 선택을 의미하며 $a,...z$으로 표현된다. 첨자 $i$ 는 참 또는 거짓이다. 즉, 슬라이딩퍼즐의 조합의 선택이 참 또는 거짓인 것을 의미한다. 그리고 첨수의 첨자 $p$는 각각 슬라이딩 퍼즐의 단계에서의 절대확률을 의미한다. 그때 그것은 선택공리와 동치이다.
           </p>
@@ -288,19 +299,18 @@
           </p>
         </section>
 
-        ---
+   
 
         <section class="section-block">
-          <h2>5. Appendix II: Choice axiom</h2>
+          <h3>5. Appendix II: Choice axiom</h3>
           <p class="left-align-text">
             쌍으로 독립인 시그마대수(<em class="italic-text">mutually P-independence</em>)를 생각해보자. 우리는 각각의 첨자 $i$를 사건이 일어나거나 또는 일어나지 않거나로 간주하기로 한다. 그리고 첨자의 인덱스는 각각의 확률적 사건이 나타내는 첨자이다. 단순하게 예제를 만들어서 설명해보자. 우리는 임의로 일곱가지 빨, 주, 노, 초, 파, 남, 보라색을 가진 몇십개의 3, 4, 5, 6각형 주사위를 가지고 있다. 그때 첫번째 첨자 $i$는 빨강색에 대하여 작동한다고 하고 이때 5의 눈이 나올 확률을 나타내는 것은 $i$의 첨자 $m$이다. 정의는 당연하므로 넘어가고 이러한 확률의 독립시행이 선택공리와 동일한 것은 당연하다. 앞의 핵심은 다음과 같다. 선택공리가 확률공간에서 현재에 대하여 미래에 일어날 사건으로 표현 가능하다는 것이다. ``이것이 무슨 의미일까?'', 선택공리는 우리가 각각이 서로 다른 색상의 항아리 안에서 서로 다른 색상의 공을 뽑아서 새로운 집합을 구성하는 것이 가능하다라는 주장을 하고 있다. 그러나 이러한 사건은 바로 위 단락의 주사위 사건과 대응된다. 즉, 그것은 현재에 대하여 항상 미래에 일어날 사건이다. 그러므로 선택공리의 증명 가능성이 주장하는 것은 미래의 확률적 사건이 발생한다는 것을 현재에서 증명 하라는 것이다. 간단히 이것은 시간적 흐름 아래에서 불 가능하다. 왜냐하면 우리는 항상 현재를 살아가기 때문이다. 따라서 앞장의 비직관적 알고리즘을 사용하여 다음장에서 확률적 사건을 다시 정의하기로 한다.
           </p>
         </section>
 
-        ---
 
         <section class="section-block">
-          <h2>6. Appendix III: Proof of Choice axiom</h2>
+          <h3>6. Appendix III: Proof of Choice axiom</h3>
           <p class="left-align-text">
             이 논문의 비직관적 알고리즘은 간략하게 요약하면 처음 슬라이딩 퍼즐을 풀이하는 경기자의 계산능력으로 만들어진 첫번째 선택 1을 제외하고, 나머지 2개의 슬라이딩 퍼즐 방향중 어떤 것이든 선택을 한다. 그것을 선택 2라고 이야기 하고 있다. 그런데 그것은 확률적 가능성을 발생 시키는 절차와 동일하다. 우리는 다음과 같이 약속하기로 한다. 확률적 가능성을 $P(reason):=P(r)$ 그리고 확률적 결과는 $P(conclusion):=P(c)$라고 표기하기로 한다. 예를들어서 주사위의 확률적 가능성은 6가지이고 그 결과는 공중에 던져져서 떨어졌을때를 의미한다.
           </p>
@@ -320,9 +330,12 @@
           <p class="left-align-text">
             논문의 증명을 읽을때 주의해야 할 사항들이 있다. 우리는 정리 3.1에 대하여 그 증명을 3.1에 소개된 정보이론의 정보의 양 정의를 사용한 증명으로 볼때는 선택공리의 증명이 필요할수도 있다. 그러나 정리 3.1에 대하여 그 무작위성의 정의를 선택공리로 정의하고 그 증명을 선택공리증명으로만도 이해할 수 있다. 또한 정리 3.1의 증명은 그러므로 슬라이딩퍼즐의 최단거리 풀이 그리고 유한한 선택공리를 동시에 증명하고 있다고도 볼 수 있다.
           </p>
-        </section>
+         </section>
+        </div>
+        </main>
       </div>
-    </main>
+    
+ 
 
     <footer class="bottom-menu">
       <nav>
@@ -335,17 +348,22 @@
       </nav>
       <p>&copy; 2025 Smilenumber group. All rights reserved.</p>
     </footer>
-  </div>
+
 </template>
 
 <script>
 export default {
   name: 'CarSales',
   mounted() {
-    // MathJax 또는 KaTeX 로드 및 렌더링 로직 (프로젝트 설정에 따라 다름)
-    // window.MathJax가 존재하는지 확인하여 'forEach' 오류 방지
+    // LaTeX 수식 렌더링 (MathJax 사용 시)
     if (window.MathJax) {
-      window.MathJax.typesetPromise(); // 페이지의 모든 LaTeX 수식을 렌더링
+      window.MathJax.typesetPromise();
+    }
+  },
+  methods: {
+    toggleMenu() {
+      const menu = document.getElementById('mainMenu');
+      menu.classList.toggle('open');
     }
   }
 };
@@ -354,52 +372,38 @@ export default {
 <style scoped>
 /* 페이지 전체 컨테이너 */
 .page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* 뷰포트 높이 전체를 차지 */
-  font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; /* 한글 폰트 적용 */
-  line-height: 1.6;
-  color: #333;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  color: #444;
 }
 
-/* 상단 메뉴 스타일 */
-.main-menu, .bottom-menu {
-  background-color: #f8f8f8;
-  padding: 15px 20px;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.main-menu {
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  margin-bottom: 20px;
 }
 
-.main-menu ul, .bottom-menu ul {
+.main-menu nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+  gap: 20px;
   justify-content: center;
-  gap: 25px; /* 메뉴 항목 간 간격 */
 }
 
-.main-menu a, .bottom-menu a {
+.main-menu nav ul li a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
-  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
-.main-menu a:hover, .bottom-menu a:hover {
-  color: #007bff;
-}
-
-/* 주요 내용 영역 */
-.main-content {
-  flex-grow: 1; /* 남은 공간을 모두 차지하여 바닥글을 하단으로 푸시 */
-  padding: 30px 20px;
-  max-width: 900px; /* 논문 내용의 최대 너비 제한 */
-  margin: 0 auto; /* 내용을 중앙 정렬 */
-  width: 100%; /* 너비 100% 사용 (max-width가 적용됨) */
-  box-sizing: border-box; /* 패딩 포함 너비 계산 */
+.main-menu nav ul li a:hover {
+  color: #7d7e7e;
 }
 
 .math-article h1, .math-article h2 {
@@ -492,14 +496,6 @@ export default {
   background-color: #f2f2f2;
 }
 
-/* Figure Caption 삭제에 따라 이 스타일도 제거 */
-/* .figure-caption {
-  font-size: 0.9em;
-  color: #666;
-  margin-top: 10px;
-  text-align: center;
-} */
-
 /* 각 섹션 블록 간 구분선 */
 .section-block {
   margin-bottom: 50px;
@@ -509,12 +505,21 @@ export default {
 .bottom-menu {
   border-top: 1px solid #eee;
   margin-top: 40px;
-  text-align: center;
   color: #666;
   font-size: 0.9em;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  display: flex;              /* 가로 정렬용 */
+  justify-content: center;    /* 가운데 정렬 */
+  gap: 15px;                  /* 요소 간 간격 (필요시) */
 }
+
+.bottom-menu a {
+  text-decoration: none;      /* 밑줄 제거 */
+  color: #666;                /* 기존 텍스트 색 유지 */
+}
+
 
 .bottom-menu p {
   margin-top: 15px;
@@ -542,9 +547,49 @@ sup {
   color: #777; /* 각주 텍스트 색상 */
 }
 
-/* 기존 sup + p rule 제거. 필요시 직접 각주 내용 감싸기 */
-/* sup + p {
-  text-indent: -1.5em;
-  margin-left: 1.5em;
-} */
+/* 모바일 반응형 메뉴 스타일 */
+@media screen and (max-width: 768px) {
+
+  .left-align-text {
+    font-size: 0.8em;
+  }
+
+  .main-menu nav ul {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 15px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .main-menu nav ul li {
+    display: none; /* 모든 메뉴 항목 숨김 */
+  }
+
+  .main-menu nav ul li:first-child {
+    display: block; /* 첫 번째 항목만 보이게 설정 (home) */
+  }
+
+  .main-menu nav ul li a {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .blog-post {
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
+
+
 </style>

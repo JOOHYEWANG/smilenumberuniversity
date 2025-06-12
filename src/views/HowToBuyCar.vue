@@ -655,6 +655,7 @@ export default {
 
   .hope-text {
     margin-top: -20px;
+     font-size: 0.7em
   }
 
   .star-picking-math-details,

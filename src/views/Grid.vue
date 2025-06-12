@@ -388,4 +388,20 @@ export default {
 }
 
 /* Any other global styles not related to specific components could go here or in a separate stylesheet */
+
+@media (max-width: 768px) {
+  .LanguageDropdown-container {
+    position: relative;
+    bottom: 62px;
+    left: 50%;
+    transform: translateX(-55%);
+    z-index: 1;
+  }
+
+  .smile-text{
+     
+font-size: 17px;
+  }
+}
+
 </style>

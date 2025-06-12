@@ -56,7 +56,7 @@ text {
   font-size: 15.33px;
   fill: red;
   font-weight: bold;
-  transition: font-size 0.5s ease, fill 0.5s ease; /* 부드러운 전환 효과 추가 */
+  transition: font-size 0.5s ease, fill 0.5s ease; /* 부드러운 전환 효과 */
 }
 
 textPath a {
@@ -69,6 +69,18 @@ textPath a:hover {
 }
 
 .heart-text-container:hover text {
-  font-size: 20px; /* hover시 변경될 글자 크기 */
+  font-size: 20px; /* hover 시 크기 확대 */
+}
+
+/* ✅ 모바일 화면에서 폰트 사이즈 17px 적용 */
+@media (max-width: 600px) {
+  text {
+    font-size: 17px;
+  }
+
+  .heart-text-container:hover text {
+    font-size: 20px; /* 모바일에서도 hover 시 동일하게 작동 */
+  }
 }
 </style>
+

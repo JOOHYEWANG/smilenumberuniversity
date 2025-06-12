@@ -95,7 +95,7 @@ export default {
 }
 
 .language-dropdown button {
-  background-color: #DAA520;
+  background-color: #999;
   border: 2px solid white; /* 프레임 경계를 하얀색으로 설정 */
   padding: 10px;
   cursor: pointer;

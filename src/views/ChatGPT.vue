@@ -60,9 +60,9 @@ export default {
   max-width: 650px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #DAA520;
+  border: 1px solid #999;
   border-radius: 10px;
-  background-color: #DAA520;
+  background-color: #999;
 }
 
 textarea {
@@ -78,7 +78,7 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: orange;
+  background-color: #706f6f;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -86,7 +86,7 @@ button {
 }
 
 button:hover {
-  background-color: orangered;
+  background-color: #545454;
 }
 
 .loading {

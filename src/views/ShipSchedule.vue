@@ -291,7 +291,7 @@ $\\$
   width: 180px;
   padding: 12px 20px;
   margin: 0 auto 30px auto;
-  background-color: #28a745;
+  background-color: #999;
   color: white;
   border: none;
   border-radius: 8px;
@@ -302,11 +302,11 @@ $\\$
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .compile-button:hover {
-  background-color: #218838;
+  background-color: #646363;
   transform: translateY(-2px);
 }
 .compile-button:active {
-  background-color: #1e7e34;
+  background-color: #535252;
   transform: translateY(0);
 }
 .latex-output {
@@ -330,7 +330,7 @@ $\\$
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .section-title {
-  color: #0056b3;
+  color: #999;
   margin-bottom: 20px;
   font-size: 1.8em;
   text-align: center;
@@ -354,7 +354,7 @@ $\\$
   word-wrap: break-word;
 }
 .latex-document-editor:focus {
-  border-color: #007bff;
+  border-color: #999;
   box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
   outline: none;
 }
@@ -363,7 +363,7 @@ $\\$
   width: 220px;
   padding: 14px 25px;
   margin: 0 auto 30px auto;
-  background-color: #6f42c1;
+  background-color: #999;
   color: white;
   border: none;
   border-radius: 8px;
@@ -374,11 +374,11 @@ $\\$
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 .document-compile-button:hover {
-  background-color: #5a36a0;
+  background-color: #333232;
   transform: translateY(-3px);
 }
 .document-compile-button:active {
-  background-color: #4b2c8a;
+  background-color: #999;
   transform: translateY(0);
 }
 .latex-document-output {
@@ -399,4 +399,19 @@ $\\$
 .Map-grid-container {
   margin-top: 80px; /* 원하는 만큼의 상단 마진 설정 */ /* 원하는 만큼의 하단 마진 설정 */
 }
+
+.options {
+  display: flex;
+  flex-direction: row; /* 기본은 가로 배열 */
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .options {
+    flex-direction: column; /* 화면 폭이 600px 이하일 때 세로 배열 */
+    align-items: flex-start;
+  }
+}
+
 </style>
